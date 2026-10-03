@@ -22,7 +22,10 @@ const bricolage = Bricolage_Grotesque({
 const TITLE = "DiskGenie — See where every byte lives";
 const DESCRIPTION =
   "A premium disk-space analyzer for Windows and Mac. Rust-powered scans, nine ways to see your drive, a Recycle-Bin-only cleanup queue, and five hand-crafted themes — including Cherry Blossom.";
+// metadataBase is the ORIGIN (no base path): relative metadata URLs
+// resolve against it, and asset() already carries the Pages base path.
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://diskgenie.app";
+const SITE_PAGE = `${SITE_URL}${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -52,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
-    url: SITE_URL,
+    url: SITE_PAGE,
     siteName: "DiskGenie",
     type: "website",
     images: [{ url: asset("/brand/og-card.png"), width: 1200, height: 630, alt: "DiskGenie" }],

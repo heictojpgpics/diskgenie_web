@@ -35,7 +35,7 @@ jobs:
           STATIC_EXPORT: "1"
           BASE_PATH: /diskgenie_web
           NEXT_PUBLIC_BASE_PATH: /diskgenie_web
-          NEXT_PUBLIC_SITE_URL: https://heictojpgpics.github.io/diskgenie_web
+          NEXT_PUBLIC_SITE_URL: https://heictojpgpics.github.io
         run: bun run build
 
       - name: Upload artifact
