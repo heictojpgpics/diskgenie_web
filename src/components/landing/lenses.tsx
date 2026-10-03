@@ -6,7 +6,7 @@ import { MODES } from "@/lib/site";
 import { asset } from "@/lib/asset";
 
 /*
- * The lenses — a scroll-snap film strip of all nine visualizations,
+ * The views — a scroll-snap film strip of all nine visualizations,
  * real captures of the same scan. Arrows + keyboard + touch; a mono
  * counter tracks position (01 / 09).
  */
@@ -54,19 +54,20 @@ export function Lenses() {
   }, []);
 
   return (
-    <section id="visualize" className="petal-wash py-20 sm:py-28">
+    <section id="views" className="petal-wash py-14 sm:py-18">
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <div className="max-w-2xl">
-          <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#c7405d]">
-            01 · Visualize
+          <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#b03852]">
+            01 · The views
           </p>
           <h2 className="mt-3 font-display text-[clamp(1.9rem,4vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.015em] text-[#3b2428]">
-            One scan. Nine lenses.
+            One scan. Nine ways to read it.
           </h2>
           <p className="mt-4 text-pretty text-[16px] leading-relaxed text-[#8a6568]">
-            Every view reads the same Rust-built tree, so switching is
-            instant and nothing rescans. Some brains want rectangles,
-            some want rings, some want a ranked list — bring yours.
+            Every view answers a different question, and switching is
+            instant because the map is already built. Some people want
+            rectangles, some want rings, some want a ranked list. Pick
+            the one that fits how you think.
           </p>
         </div>
 
@@ -75,9 +76,9 @@ export function Lenses() {
             <span className="text-[15px] font-semibold text-[#3b2428] tnum">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <span className="text-[#a38083]">/ {String(MODES.length).padStart(2, "0")}</span>
+            <span className="text-[#836066]">/ {String(MODES.length).padStart(2, "0")}</span>
             <span className="ml-2 hidden text-[#3b2428] sm:inline">
-              — {MODES[index].name}
+              · {MODES[index].name}
             </span>
           </div>
           <div className="mt-4 flex gap-2">
@@ -146,7 +147,7 @@ export function Lenses() {
                 <span className="font-display text-[15px] font-semibold text-[#3b2428]">
                   {m.name}
                 </span>
-                <span className="ml-2 font-mono text-[11px] text-[#a38083] tnum">
+                <span className="ml-2 font-mono text-[11px] text-[#836066] tnum">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <p className="mt-0.5 text-[13.5px] text-[#8a6568]">{m.caption}</p>

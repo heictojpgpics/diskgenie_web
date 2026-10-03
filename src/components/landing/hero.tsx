@@ -52,21 +52,20 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d8506b] opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[#d8506b]" />
             </span>
-            Rust core · Windows &amp; Mac · zero telemetry by default
+            Now available for Windows and Mac
           </div>
 
           <h1 className="font-display text-[clamp(2.4rem,6vw,4.3rem)] font-bold leading-[1.04] tracking-[-0.02em] text-[#3b2428]">
-            Your disk is full.
+            See what&rsquo;s eating your disk.
             <br />
-            <Cover className="px-3 py-1.5 font-display">DiskGenie</Cover>{" "}
-            knows why.
+            Clean it with <Cover className="px-3 py-1.5 font-display">DiskGenie.</Cover>
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-pretty text-[17px] leading-relaxed text-[#8a6568] sm:text-lg">
-            Scan a drive in seconds, see it nine different ways, and sweep
-            the weight away — through a queue that only ever moves to the
-            Recycle Bin. A premium desktop tool, built with a Rust core
-            and a canvas interface that feels alive.
+            A full scan runs in seconds and shows you exactly where the
+            space went. Nine views for however you think. When it&rsquo;s
+            time to clean, everything passes through a queue you approve
+            first.
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -94,12 +93,12 @@ export function Hero() {
             </a>
           </div>
 
-          <p className="mt-5 font-mono text-[12px] tracking-wide text-[#a38083]">
-            Windows 10+ · macOS on Apple Silicon · free to scan
+          <p className="mt-5 font-mono text-[12px] tracking-wide text-[#836066]">
+            Windows 10+ and macOS on Apple Silicon · $10 a year or $25 once
           </p>
         </div>
 
-        {/* the hero footage — a real, unedited capture of the app */}
+        {/* the hero footage, captured from the real app */}
         <div className="relative mx-auto mt-14 max-w-5xl sm:mt-16">
           <div
             className="absolute -inset-x-8 -top-10 -bottom-16 rounded-[3rem] bg-gradient-to-b from-[rgba(236,109,132,0.10)] to-transparent blur-2xl"
@@ -118,9 +117,8 @@ export function Hero() {
               aria-label="DiskGenie scanning a drive and exploring the treemap"
             />
           </AppFrame>
-          <p className="mt-4 text-center text-[13px] text-[#a38083]">
-            Unedited footage — a full scan, the treemap drill-down, and the
-            inspector, at actual speed.
+          <p className="mt-4 text-center text-[13px] text-[#836066]">
+            Real footage: a full scan, then a drill into the map, at normal speed.
           </p>
         </div>
       </div>

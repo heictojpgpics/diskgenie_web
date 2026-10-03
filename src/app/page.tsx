@@ -1,9 +1,9 @@
 import { Nav } from "@/components/landing/nav";
 import { Hero } from "@/components/landing/hero";
-import { Stats } from "@/components/landing/stats";
+import { Proof } from "@/components/landing/proof";
 import { Lenses } from "@/components/landing/lenses";
-import { Features } from "@/components/landing/features";
 import { CleanupVideo } from "@/components/landing/cleanup-video";
+import { Features } from "@/components/landing/features";
 import { Themes } from "@/components/landing/themes";
 import { Safety } from "@/components/landing/safety";
 import { Pricing } from "@/components/landing/pricing";
@@ -16,10 +16,10 @@ export default function Home() {
       <Nav />
       <main className="flex-1">
         <Hero />
-        <Stats />
+        <Proof />
         <Lenses />
-        <Features />
         <CleanupVideo />
+        <Features />
         <Themes />
         <Safety />
         <Pricing />

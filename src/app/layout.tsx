@@ -19,9 +19,9 @@ const bricolage = Bricolage_Grotesque({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const TITLE = "DiskGenie — See where every byte lives";
+const TITLE = "DiskGenie · See what's eating your disk";
 const DESCRIPTION =
-  "A premium disk-space analyzer for Windows and Mac. Rust-powered scans, nine ways to see your drive, a Recycle-Bin-only cleanup queue, and five hand-crafted themes — including Cherry Blossom.";
+  "A disk space analyzer for Windows and Mac. Scans a full drive in seconds, shows it nine ways, and cleans it through a queue you control. $10 a year or $25 once.";
 // metadataBase is the ORIGIN (no base path): relative metadata URLs
 // resolve against it, and asset() already carries the Pages base path.
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://diskgenie.app";
@@ -42,7 +42,6 @@ export const metadata: Metadata = {
     "duplicate finder",
     "Windows disk usage",
     "Mac disk usage",
-    "Rust",
   ],
   authors: [{ name: "DiskGenie" }],
   icons: {

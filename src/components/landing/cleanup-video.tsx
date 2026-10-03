@@ -3,28 +3,29 @@ import { AppFrame } from "./app-frame";
 import { asset } from "@/lib/asset";
 
 const STEPS = [
-  { n: "1", label: "Scan", body: "Pick the whole PC or any folder. The map builds while it runs." },
-  { n: "2", label: "Right-click", body: "Any cell, folder, or file — the menu offers Add to Cleanup." },
-  { n: "3", label: "Stage", body: "Items queue up with sizes and totals. Nothing has moved yet." },
-  { n: "4", label: "Commit once", body: "One confirmation moves everything to the Recycle Bin. Reversible." },
+  { n: "1", label: "Scan", body: "Pick a drive or a folder. The map fills in while it runs." },
+  { n: "2", label: "Queue", body: "Right-click any file or folder and add it to the cleanup queue." },
+  { n: "3", label: "Review", body: "See everything in one list, with sizes and a total. Nothing has moved yet." },
+  { n: "4", label: "Commit", body: "One confirmation and it all goes to the Recycle Bin. A mistake is still fixable." },
 ] as const;
 
 export function CleanupVideo() {
   return (
-    <section className="petal-wash py-20 sm:py-28">
+    <section id="cleanup" className="py-14 sm:py-18">
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.25fr] lg:gap-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.25fr] lg:gap-14">
           <div>
-            <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#c7405d]">
-              03 · Quick actions
+            <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#b03852]">
+              02 · The cleanup
             </p>
             <h2 className="mt-3 font-display text-[clamp(1.9rem,4vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.015em] text-[#3b2428]">
               The twenty-second cleanup.
             </h2>
             <p className="mt-4 text-pretty text-[16px] leading-relaxed text-[#8a6568]">
-              Deleting is a two-step dance, on purpose. You stage from
-              anywhere — the map, the list, Quick Wins, duplicates — and
-              nothing leaves your drive until you say the word.
+              Right-click anything suspicious and add it to the queue.
+              Keep going while you find more, review the total, then
+              commit once. Everything lands in the Recycle Bin, where a
+              mistake can still be undone.
             </p>
 
             <ol className="mt-8 space-y-5">
@@ -53,12 +54,12 @@ export function CleanupVideo() {
                 loop
                 playsInline
                 preload="metadata"
-                aria-label="Staging folders from the treemap into the cleanup queue"
+                aria-label="Queueing folders from the treemap into the cleanup queue"
               />
             </AppFrame>
-            <p className="mt-4 text-center text-[13px] text-[#a38083]">
-              Real footage — right-click, stage, review, commit. The queue
-              shows 5.69 GB staged before the final word.
+            <p className="mt-4 text-center text-[13px] text-[#836066]">
+              Real footage: right-click, queue, review, commit. The
+              queue shows 5.69 GB before the final word.
             </p>
           </div>
         </div>

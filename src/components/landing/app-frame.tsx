@@ -33,7 +33,7 @@ export function AppFrame({
           <span className="h-[11px] w-[11px] rounded-full bg-[#f4bf4f] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.08)]" />
           <span className="h-[11px] w-[11px] rounded-full bg-[#62c554] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.08)]" />
         </span>
-        <span className="pointer-events-none absolute inset-x-0 text-center font-mono text-[11px] tracking-wide text-[#a38083]">
+        <span className="pointer-events-none absolute inset-x-0 text-center font-mono text-[11px] tracking-wide text-[#836066]">
           {title}
         </span>
       </div>

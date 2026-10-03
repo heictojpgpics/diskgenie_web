@@ -92,12 +92,12 @@
   --blush-deep: #f6e9e5;
   --rosewood: #3b2428;
   --rosewood-2: #8a6568;
-  --rosewood-3: #a38083;
+  --rosewood-3: #836066;
 
   --chart-1: #d8506b;
   --chart-2: #ec6d84;
   --chart-3: #c43b58;
-  --chart-4: #a38083;
+  --chart-4: #836066;
   --chart-5: #8a6568;
 
   --sidebar: #ffffff;
@@ -137,7 +137,9 @@
     background-image: linear-gradient(180deg, #ec6d84 0%, #d8506b 55%, #c43b58 100%);
   }
   .text-ink-grad {
-    background-image: linear-gradient(160deg, #e7637d 0%, #d8506b 48%, #b8385340 100%);
+    /* deeper stops than the chip gradient: display-size gradient text
+     * reads richer and holds contrast on white cards (~4.4-5:1) */
+    background-image: linear-gradient(160deg, #d8506b 0%, #c7405d 45%, #b03852 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

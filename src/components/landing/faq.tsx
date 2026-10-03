@@ -9,18 +9,18 @@ import { FAQS } from "@/lib/site";
 
 export function Faq() {
   return (
-    <section id="faq" className="py-20 sm:py-28">
+    <section id="faq" className="petal-wash py-14 sm:py-16">
       <div className="mx-auto max-w-3xl px-5 sm:px-6">
         <div className="text-center">
-          <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#c7405d]">
+          <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#b03852]">
             07 · FAQ
           </p>
           <h2 className="mt-3 font-display text-[clamp(1.9rem,4vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.015em] text-[#3b2428]">
-            The honest answers.
+            Straight answers.
           </h2>
         </div>
 
-        <Accordion type="single" collapsible className="mt-10 space-y-3.5">
+          <Accordion type="single" collapsible className="mt-8 space-y-3">
           {FAQS.map((f, i) => (
             <AccordionItem
               key={f.q}

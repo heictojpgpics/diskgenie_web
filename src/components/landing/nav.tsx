@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Brandmark } from "./nav-parts";
+import { BrandMark } from "./brand";
 import { DOWNLOAD_URL, NAV_LINKS } from "@/lib/site";
 
 export function Nav() {
@@ -22,7 +22,7 @@ export function Nav() {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-6">
         <a href="#top" className="flex items-center gap-2.5" aria-label="DiskGenie home">
-          <Brandmark />
+          <BrandMark size={30} />
           <span className="font-display text-[17px] font-semibold tracking-tight text-[#3b2428]">
             DiskGenie
           </span>

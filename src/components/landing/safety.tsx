@@ -1,85 +1,72 @@
 "use client";
-import Image from "next/image";
-import { AppFrame } from "./app-frame";
-import { asset } from "@/lib/asset";
 
+/*
+ * Safe by design — one compact dark band. The deep-rosewood surface
+ * gives the page its second dark beat (the closing CTA is the third)
+ * and the safety story stays human: what the rules mean for you.
+ */
 const GUARANTEES = [
   {
-    title: "Recycle Bin, or it doesn't move",
-    body: "Commits go to the Windows Recycle Bin or the Mac Trash — never a direct delete. Items that can't be recycled are refused before anything happens, not discovered after.",
+    title: "Recycle Bin or nothing",
+    body: "Cleanup goes to the Recycle Bin on Windows and the Trash on Mac. Anything that could not be recovered that way is refused before it moves.",
   },
   {
-    title: "Cloud files are never touched",
-    body: "Placeholder files from OneDrive and friends are skipped — never opened, previewed, or hashed, because that would download them. They stay exactly as they are.",
+    title: "Cloud files stay cloud files",
+    body: "OneDrive and other placeholder files are never opened by a scan, so your storage never quietly fills up behind your back.",
   },
   {
-    title: "Protected folders stay protected",
-    body: "System folders can't be staged. The review step shows every item, and unreadable areas are reported honestly instead of guessed at.",
-  },
-  {
-    title: "One fallback, always announced",
-    body: "Turbo → standard is the only fallback in the product, and it's user-visible with a reason. Everything else is the same engine you started with.",
+    title: "Your data stays put",
+    body: "Scans run entirely on your machine. There is no account, and no file names leave your computer.",
   },
 ];
 
 export function Safety() {
   return (
-    <section id="safety" className="py-20 sm:py-28">
+    <section id="safety" className="py-14 sm:py-18">
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
-          <div className="order-2 lg:order-1">
-            <AppFrame className="card-lift">
-              <div className="relative aspect-[5/3] w-full bg-white">
-                <Image
-                  src={asset("/shots/queue.webp")}
-                  alt="The cleanup queue popover reviewing staged items before anything moves"
-                  fill
-                  sizes="(max-width: 1024px) 92vw, 560px"
-                  className="object-cover object-top"
-                />
-              </div>
-            </AppFrame>
-            <p className="mt-4 text-center text-[13px] text-[#a38083]">
-              The queue before the commit — every item, every size, one
-              decision.
+        <div className="rosewood-band relative overflow-hidden rounded-3xl px-6 py-12 sm:px-12 sm:py-14">
+          <div
+            className="absolute inset-0 opacity-[0.3]"
+            style={{
+              backgroundImage:
+                "radial-gradient(rgba(255,255,255,0.16) 1px, transparent 1px)",
+              backgroundSize: "26px 26px",
+            }}
+            aria-hidden="true"
+          />
+          <div className="relative mx-auto max-w-2xl text-center">
+            <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#f6b8c5]">
+              05 · Safe by design
             </p>
-          </div>
-
-          <div className="order-1 lg:order-2">
-            <p className="font-mono text-[12px] uppercase tracking-[0.18em] text-[#c7405d]">
-              05 · Safety
-            </p>
-            <h2 className="mt-3 font-display text-[clamp(1.9rem,4vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.015em] text-[#3b2428]">
+            <h2 className="mt-3 font-display text-[clamp(1.9rem,4vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.015em] text-white">
               Deleting is deliberate.
             </h2>
-            <p className="mt-4 text-pretty text-[16px] leading-relaxed text-[#8a6568]">
-              A cleanup tool earns trust in the delete path or not at
-              all. DiskGenie's is belt, braces, and a receipt.
-            </p>
-
-            <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-              {GUARANTEES.map((g) => (
-                <li key={g.title} className="rounded-2xl border border-[#e5d0ca] bg-white p-5 card-lift">
-                  <div className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgba(216,80,107,0.12)] text-[#c7405d]">
-                      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                        <path d="m3.5 8.5 3 3 6-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    <div>
-                      <p className="text-[15px] font-semibold leading-snug text-[#3b2428]">{g.title}</p>
-                      <p className="mt-1.5 text-[13.5px] leading-relaxed text-[#8a6568]">{g.body}</p>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            <p className="mt-6 rounded-xl bg-[rgba(216,80,107,0.07)] px-4 py-3 text-[13px] leading-relaxed text-[#8a6568]">
-              <span className="font-semibold text-[#c7405d]">Zero direct-delete APIs</span>{" "}
-              in the product code — enforced by a grep in CI on every single build.
+            <p className="mt-4 text-pretty text-[16px] leading-relaxed text-[#e5c4cc]">
+              A cleanup tool earns its keep on the delete path. Every
+              removal in DiskGenie passes the same three gates.
             </p>
           </div>
+
+          <ul className="relative mt-10 grid gap-4 sm:grid-cols-3">
+            {GUARANTEES.map((g) => (
+              <li
+                key={g.title}
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-[2px]"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[rgba(236,109,132,0.2)] text-[#f6b8c5]">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="m3.5 8.5 3 3 6-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p className="text-[15px] font-semibold leading-snug text-white">{g.title}</p>
+                    <p className="mt-1.5 text-[13.5px] leading-relaxed text-[#dcb8c0]">{g.body}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

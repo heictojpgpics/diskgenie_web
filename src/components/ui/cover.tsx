@@ -44,7 +44,7 @@ export const Cover = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       ref={ref}
-      className="relative hover:bg-[#3b2428] group/cover inline-block dark:bg-[#3b2428] bg-[#f6e9e5] px-2 py-2 transition duration-200 rounded-sm"
+      className="relative hover:bg-[#3b2428] group/cover inline-block dark:bg-[#3b2428] bg-[#f6e9e5] px-2 py-2 transition duration-200 rounded-lg"
     >
       <AnimatePresence>
         {hovered && (
@@ -227,7 +227,7 @@ export const CircleIcon = ({
   return (
     <div
       className={cn(
-        `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-[#a38083] dark:bg-white opacity-20 group-hover/cover:bg-white`,
+        `pointer-events-none group-hover/cover:opacity-100 group-hover/cover:animate-pulse group h-2 w-2 rounded-full bg-white opacity-0 transition-opacity duration-200`,
         className,
       )}
       style={delay ? { animationDelay: `${delay}s` } : undefined}
